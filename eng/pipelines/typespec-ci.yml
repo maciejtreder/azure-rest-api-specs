@@ -40,7 +40,7 @@ jobs:
   
   - script: echo "##vso[task.setvariable variable=TypeSpecFolders] a,b,c"
 
-  - ${{ each folder in split(variables.TypeSpecFolders, ',') }}:
+  - ${{ each folder in split(variables['TypeSpecFolders'], ',') }}:
     - template: templates/steps/typespec-ci.yml
       parameters:
         Folder: ${{ folder }}
