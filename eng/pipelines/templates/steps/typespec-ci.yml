@@ -5,6 +5,9 @@ parameters:
   type: string
 
 steps:
-- script: ts-node eng/tools/TypeSpecValidation/src/TypeSpecValidation.ts ${{parameters.Folder}}
+- script: |
+    npm install
+    ts-node src/TypeSpecValidation.ts ${{parameters.Folder}}
   displayName: ${{ parameters.DisplayName }}
+  workingDirectory: $(Build.SourcesDirectory)/eng/tools/TypeSpecValidation/
   condition: succeededOrFailed()
