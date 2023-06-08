@@ -22,14 +22,14 @@ jobs:
   variables:
     - name: TypeSpecFolders
       value: >
-        "specification/contosowidgetmanager/Contoso.WidgetManager,
+        specification/contosowidgetmanager/Contoso.WidgetManager,
         specification/cognitiveservices/AnomalyDetector,
         specification/cognitiveservices/ContentSafety,
         specification/cognitiveservices/HealthInsights/healthinsights.openapi,
         specification/cognitiveservices/OpenAI.Inference,
         specification/containerservice/Fleet.Management,
         specification/servicenetworking/ServiceNetworking.Management,
-        specification/translation/Azure.AI.TextTranslation"
+        specification/translation/Azure.AI.TextTranslation
 
   steps:
   - script: npm ci
