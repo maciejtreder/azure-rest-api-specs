@@ -44,4 +44,4 @@ jobs:
     - template: templates/steps/typespec-ci.yml
       parameters:
         Folder: ${{ folder }}
-        displayName: ${{ split(folder, '/')[-1] }}
+        displayName: ${{ folder }}
