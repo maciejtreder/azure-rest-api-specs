@@ -1,8 +1,6 @@
 parameters:
 - name: Folders
   type: object
-- name: DisplayName
-  type: string
 
 steps:
 - ${{ each folder in parameters.Folders }}:
