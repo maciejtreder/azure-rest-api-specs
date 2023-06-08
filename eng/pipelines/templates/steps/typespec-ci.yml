@@ -5,7 +5,6 @@ parameters:
   type: string
 
 steps:
-- ${{ each folder in parameters.Folders }}:
-  - script: ts-node eng/tools/TypeSpecValidation/src/TypeSpecValidation.ts ${{Folder}}
-    displayName: ${{ parameters.ServiceDirectory }}
-    condition: succeededOrFailed()
+- script: ts-node eng/tools/TypeSpecValidation/src/TypeSpecValidation.ts ${{Folder}}
+  displayName: ${{ parameters.ServiceDirectory }}
+  condition: succeededOrFailed()
