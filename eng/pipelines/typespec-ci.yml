@@ -42,4 +42,4 @@ jobs:
 
   - template: templates/steps/typespec-ci.yml
     parameters:
-      Folders: $(TypeSpecFolders)
+      Folders: ${{TypeSpecFolders}}
