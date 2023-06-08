@@ -38,6 +38,8 @@ jobs:
   - script: npm ls -a
     displayName: npm ls -a
   
+  - script: npm install -g ts-node
+  
   - script: echo "##vso[task.setvariable variable=TypeSpecFolders] a,b,c"
 
   - ${{ each folder in split(variables['TypeSpecFolders'], ',') }}:
