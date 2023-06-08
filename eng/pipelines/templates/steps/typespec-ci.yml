@@ -1,9 +1,11 @@
 parameters:
-- name: Folders
-  type: object
+- name: Folder
+  type: string
+- name: DisplayName
+  type: string
 
 steps:
 - ${{ each folder in parameters.Folders }}:
-  - script: ts-node eng/tools/TypeSpecValidation/src/TypeSpecValidation.ts ${{folder}}
-    displayName: split($folder, '/')[-1]
+  - script: ts-node eng/tools/TypeSpecValidation/src/TypeSpecValidation.ts ${{Folder}}
+    displayName: ${{ parameters.ServiceDirectory }}
     condition: succeededOrFailed()

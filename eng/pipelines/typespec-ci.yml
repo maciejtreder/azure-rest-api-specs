@@ -22,16 +22,14 @@ jobs:
   variables:
     - name: TypeSpecFolders
       value: >
-        "@{
-        Contoso.WidgetManager='specification/contosowidgetmanager/Contoso.WidgetManager';
-        AnomalyDetector='specification/cognitiveservices/AnomalyDetector';
-        ContentSafety='specification/cognitiveservices/ContentSafety';
-        healthinsights.openapi='specification/cognitiveservices/HealthInsights/healthinsights.openapi';
-        OpenAI.Inference='specification/cognitiveservices/OpenAI.Inference';
-        Fleet.Management='specification/containerservice/Fleet.Management';
-        Microsoft.ServiceNetworking='specification/servicenetworking/ServiceNetworking.Management';
-        AI.TextTranslation='specification/translation/Azure.AI.TextTranslation';
-        }"
+        "specification/contosowidgetmanager/Contoso.WidgetManager,
+        specification/cognitiveservices/AnomalyDetector,
+        specification/cognitiveservices/ContentSafety,
+        specification/cognitiveservices/HealthInsights/healthinsights.openapi,
+        specification/cognitiveservices/OpenAI.Inference,
+        specification/containerservice/Fleet.Management,
+        specification/servicenetworking/ServiceNetworking.Management,
+        specification/translation/Azure.AI.TextTranslation"
 
   steps:
   - script: npm ci
@@ -40,6 +38,8 @@ jobs:
   - script: npm ls -a
     displayName: npm ls -a
 
-  - template: templates/steps/typespec-ci.yml
-    parameters:
-      Folders: ${{TypeSpecFolders}}
+  - ${{ each folder in split(variables.TypeSpecFolders, ',') }}:
+    - template: templates/steps/typespec-ci.yml
+      parameters:
+        Folder: ${{ folder }}
+        displayName: split($folder, '/')[-1]
