@@ -420,6 +420,7 @@ codemirror
 codepackage
 Coffeelake
 cognitiveservices
+cogservice
 colls
 colocation
 Cololocation
