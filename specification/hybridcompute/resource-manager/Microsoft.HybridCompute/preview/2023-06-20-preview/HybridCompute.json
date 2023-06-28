@@ -2188,7 +2188,9 @@
         "HCI",
         "SCVMM",
         "VMware",
-        "EPS"
+        "EPS",
+        "GCP",
+        "AWS"
       ],
       "x-ms-enum": {
         "name": "ArcKindEnum ",
@@ -2279,6 +2281,11 @@
           "description": "Describe the Update properties of a license profile."
         }
       },
+      "allOf": [
+        {
+          "$ref": "#/definitions/ResourceUpdate"
+        }
+      ],
       "description": "Describes a License Profile Update."
     },
     "LicenseProfilesListResult": {
@@ -3230,7 +3237,7 @@
       "in": "path",
       "required": true,
       "type": "string",
-      "pattern": "[a-zA-Z0-9-_\\.]",
+      "pattern": "[a-zA-Z0-9-_\\.]+",
       "description": "The name of the hybrid machine.",
       "x-ms-parameter-location": "method"
     },
@@ -3240,7 +3247,7 @@
       "description": "The name of the license profile.",
       "required": true,
       "type": "string",
-      "pattern": "[a-zA-Z0-9-_\\.]",
+      "pattern": "[a-zA-Z0-9-_\\.]+",
       "enum": [
         "default"
       ],

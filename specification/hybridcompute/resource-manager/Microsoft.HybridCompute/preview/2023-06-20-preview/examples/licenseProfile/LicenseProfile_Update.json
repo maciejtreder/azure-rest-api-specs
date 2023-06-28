@@ -6,7 +6,6 @@
     "licenseProfileName": "default",
     "api-version": "2023-06-20-preview",
     "parameters": {
-      "location": "eastus2euap",
       "properties": {
         "esuProfile": {
           "arcEsuEnrolled": "false"
