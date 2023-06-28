@@ -26,7 +26,7 @@ These are the global settings for the DelegatedNetwork API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2021-03-15
+tag: package-2023-06-27-preview
 ```
 
 ### Tag: package-2023-06-27-preview
