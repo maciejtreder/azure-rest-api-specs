@@ -6,6 +6,7 @@
     "licenseProfileName": "default",
     "api-version": "2023-06-20-preview",
     "parameters": {
+      "location": "eastus2euap",
       "properties": {
         "esuProfile": {
           "arcEsuEnrolled": "false",
@@ -29,6 +30,8 @@
         "id": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/myMachine/licenseProfiles/default",
         "name": "default",
         "type": "Microsoft.HybridCompute/machines/licenseProfiles",
+        "location": "eastus2euap",
+        "tags": null,
         "properties": {
           "esuProfile": {
             "arcEsuEnrolled": "false",
@@ -63,6 +66,7 @@
         "id": "/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/Machines/myMachine/licenseProfiles/default",
         "name": "default",
         "type": "Microsoft.HybridCompute/machines/licenseProfiles",
+        "location": "eastus2euap",
         "properties": {
           "esuProfile": {
             "arcEsuEnrolled": "false",
