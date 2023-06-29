@@ -21,11 +21,11 @@
                 "arcEsuEnrolled": "true",
                 "esuKeys": [
                   {
-                    "sku": "skuNumber1",
+                    "esuSku": "esuSkuNumber1",
                     "licenseStatus": "licenseStatus1"
                   },
                   {
-                    "sku": "skuNumber2",
+                    "esuSku": "esuSkuNumber2",
                     "licenseStatus": "licenseStatus2"
                   }
                 ],

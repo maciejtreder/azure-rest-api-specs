@@ -2311,7 +2311,7 @@
     "EsuKey": {
       "type": "object",
       "properties": {
-        "sku": {
+        "esuSku": {
           "type": "string",
           "description": "SKU number."
         },
